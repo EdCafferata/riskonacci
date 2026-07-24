@@ -8,47 +8,56 @@ struct TipJarView: View {
 
     var body: some View {
         NavigationStack {
-            ScrollView {
-                VStack(spacing: 24) {
-                    VStack(spacing: 8) {
-                        Image(systemName: "heart.fill")
-                            .font(.system(size: 44))
-                            .foregroundStyle(.red)
-                        Text("Riskonacci is free, always.")
-                            .font(.title3.bold())
-                        Text("If it saves your team time, a small tip is always appreciated — never required.")
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
-                            .multilineTextAlignment(.center)
-                            .padding(.horizontal)
-                    }
-                    .padding(.top, 24)
+            GeometryReader { geometry in
+                ScrollView {
+                    VStack(spacing: 24) {
+                        VStack(spacing: 8) {
+                            Image(systemName: "heart.fill")
+                                .font(.system(size: 44))
+                                .foregroundStyle(.red)
+                            Text("Riskonacci is free, always.")
+                                .font(.title3.bold())
+                            Text("If it saves your team time, a small tip is always appreciated — never required.")
+                                .font(.subheadline)
+                                .foregroundStyle(.secondary)
+                                .multilineTextAlignment(.center)
+                                .padding(.horizontal)
+                        }
+                        .padding(.top, 24)
 
-                    if store.isLoading {
-                        ProgressView()
-                    } else {
-                        GlassEffectContainer(spacing: 14) {
-                            VStack(spacing: 14) {
-                                ForEach(store.products) { product in
-                                    tipButton(for: product)
+                        if store.isLoading {
+                            ProgressView()
+                        } else {
+                            GlassEffectContainer(spacing: 14) {
+                                VStack(spacing: 14) {
+                                    ForEach(store.products) { product in
+                                        tipButton(for: product)
+                                    }
                                 }
                             }
+                            .padding(.horizontal)
                         }
-                        .padding(.horizontal)
-                    }
 
-                    if let message = store.lastTipMessage {
-                        Text(message)
-                            .font(.headline)
-                            .foregroundStyle(Color.accentColor)
-                    }
+                        if let message = store.lastTipMessage {
+                            Text(message)
+                                .font(.headline)
+                                .foregroundStyle(Color.accentColor)
+                        }
 
-                    thanksSection
-                        .padding(.top, 8)
+                        thanksSection
+                            .padding(.top, 8)
+                    }
+                    .padding(.bottom, 32)
+                    .frame(maxWidth: 480)
+                    .frame(maxWidth: .infinity)
                 }
-                .padding(.bottom, 32)
-                .frame(maxWidth: 480)
-                .frame(maxWidth: .infinity)
+                // Fixed at 80% of the screen height, independent of the
+                // scroll content's length, instead of living inline where
+                // it would drift depending on how much is above it.
+                .overlay(alignment: .top) {
+                    rateButton
+                        .padding(.top, geometry.size.height * 0.8)
+                }
             }
             .navigationTitle("Tip Jar")
             .navigationBarTitleDisplayMode(.inline)
@@ -61,6 +70,15 @@ struct TipJarView: View {
         .task {
             await store.loadProducts()
         }
+    }
+
+    private var rateButton: some View {
+        Button {
+            requestReview()
+        } label: {
+            Label("Rate Riskonacci", systemImage: "star.fill")
+        }
+        .buttonStyle(.glass)
     }
 
     private var thanksSection: some View {
@@ -87,14 +105,6 @@ struct TipJarView: View {
                 .foregroundStyle(Color.accentColor)
             }
             .padding(.top, 4)
-
-            Button {
-                requestReview()
-            } label: {
-                Label("Rate Riskonacci", systemImage: "star.fill")
-            }
-            .buttonStyle(.glass)
-            .padding(.top, 8)
         }
     }
 
