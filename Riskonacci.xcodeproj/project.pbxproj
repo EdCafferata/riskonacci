@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03325664A38F457A18A5013D /* RiskMatrixRevealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698FD69B7CED3DB90D172EB9 /* RiskMatrixRevealView.swift */; };
+		072BDFA1759284BD0EF70ADC /* PokerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC4E260B2813F2739FA9B8E /* PokerCard.swift */; };
+		07DC3C43A030A0B9E21B1229 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D5E3B22222E4ABBE97B426 /* ContentView.swift */; };
+		1306129206DAD8B9C57183E6 /* ParticipantsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACDF2F7D445F7C00BC16662 /* ParticipantsRow.swift */; };
+		153588A9F977D226DDA6A97B /* SessionTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05BC17D6B27EFB8E1D28B5B /* SessionTransport.swift */; };
+		1547BE9BB7FF94CED985B5FB /* CardGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C772DF95FADA5EBCE65F9947 /* CardGridView.swift */; };
+		1651F0245092AFD06F4C47E5 /* MultiplayerRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0E5381A2DDFAC20C27FF3E /* MultiplayerRoomViewModel.swift */; };
+		2802F0813B5F4359B2628CAE /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = CE5391F3BC7B4BF151951DB8 /* Localizable.xcstrings */; };
+		2B28EE08BDFEEBC7409A788E /* RoomEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D0562EA0F07DABAF27B16A /* RoomEntryView.swift */; };
+		3FFC4C518C05E5F8C9415B37 /* RoomCardGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931F1A00551D3C66030B781B /* RoomCardGridView.swift */; };
+		5DE6A856B98145A8D8B4B8BD /* TipJarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EB3E68EEDD71FCB9EBABB /* TipJarView.swift */; };
+		6E4A9575A22C1421D8F4CB00 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8204AD75B36E137B8B964BC9 /* Deck.swift */; };
+		723052F4B8E2B34B595536F0 /* RevealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A083419B0C86E01069DCC08 /* RevealView.swift */; };
+		8493C56927C451C64F21CC13 /* RiskMatrixGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBF7A503DD7D6967EC08C60 /* RiskMatrixGrid.swift */; };
+		8736C3F3EEBC6F56596B089E /* DeckPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDDA58A03EB417E25F79A66 /* DeckPickerView.swift */; };
+		8CA89E28217A870487C2D9CC /* SessionParticipant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491A15013ADE40A75F88046C /* SessionParticipant.swift */; };
+		91E99DF5CB8779D984635072 /* RiskLevelColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC2BEEB9F62C362CD0FD84B /* RiskLevelColor.swift */; };
+		9571AF01CACEB9B9188367A4 /* RiskAxis.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F97732D941F86F397AA35B /* RiskAxis.swift */; };
+		95E0E090F74805AFD31D1466 /* TipProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F92F896754ECA2B0E1EF8F2 /* TipProduct.swift */; };
+		AC0DB192E978AE3681874F99 /* SessionMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DCE5A15B8913D231963B3 /* SessionMessage.swift */; };
+		AEC16EECC6129D1EEE555E9B /* RoomRevealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92735C7FFA43CD474E4F82F3 /* RoomRevealView.swift */; };
+		B9DD29BB4D35CB5B7A99AE07 /* RiskonacciApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2682CC248602FC2010B82866 /* RiskonacciApp.swift */; };
+		BE8130BBBCE9694F0E39AFEE /* DebugLaunchOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CA0F003F00D0E849B3392A /* DebugLaunchOptions.swift */; };
+		C4DCE50AD499BE47E029B71B /* PokerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E3D7F94D03489F843BDBC /* PokerCardView.swift */; };
+		CB282E073402D8870BC99B50 /* RoomID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775E2141DA27E2AF9D02A305 /* RoomID.swift */; };
+		E35F2EAB39829A01B4313704 /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A347A3F17E728630B62E4E1 /* RoomView.swift */; };
+		EB2DFFEBF9581087821BFCF4 /* MultipeerSessionTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECE5BB48AD67A15C64E6923 /* MultipeerSessionTransport.swift */; };
+		F460CF13748AC7F20D83A644 /* Riskonacci.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 0D25A12C1E0EAFF93170444D /* Riskonacci.storekit */; };
+		F592E650F3E0F77A832BF7A8 /* TipJarStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E072F5DE6E91B7AFA25330D3 /* TipJarStore.swift */; };
+		FA2ECF88AA1378159D41ABE4 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44F6B9026FDA04A73BDF9A3 /* GameViewModel.swift */; };
+		FBC74DC1F2D668E95516EC3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D251517EB02142D38418E53 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0D25A12C1E0EAFF93170444D /* Riskonacci.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Riskonacci.storekit; sourceTree = "<group>"; };
+		0DDDA58A03EB417E25F79A66 /* DeckPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckPickerView.swift; sourceTree = "<group>"; };
+		190E3D7F94D03489F843BDBC /* PokerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokerCardView.swift; sourceTree = "<group>"; };
+		1A347A3F17E728630B62E4E1 /* RoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
+		2682CC248602FC2010B82866 /* RiskonacciApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskonacciApp.swift; sourceTree = "<group>"; };
+		2A0E5381A2DDFAC20C27FF3E /* MultiplayerRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplayerRoomViewModel.swift; sourceTree = "<group>"; };
+		2A2EB3E68EEDD71FCB9EBABB /* TipJarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipJarView.swift; sourceTree = "<group>"; };
+		2ECE5BB48AD67A15C64E6923 /* MultipeerSessionTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerSessionTransport.swift; sourceTree = "<group>"; };
+		31CA0F003F00D0E849B3392A /* DebugLaunchOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLaunchOptions.swift; sourceTree = "<group>"; };
+		39D5E3B22222E4ABBE97B426 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		491A15013ADE40A75F88046C /* SessionParticipant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionParticipant.swift; sourceTree = "<group>"; };
+		698FD69B7CED3DB90D172EB9 /* RiskMatrixRevealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskMatrixRevealView.swift; sourceTree = "<group>"; };
+		775E2141DA27E2AF9D02A305 /* RoomID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomID.swift; sourceTree = "<group>"; };
+		7A083419B0C86E01069DCC08 /* RevealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevealView.swift; sourceTree = "<group>"; };
+		8204AD75B36E137B8B964BC9 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		8CC2BEEB9F62C362CD0FD84B /* RiskLevelColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskLevelColor.swift; sourceTree = "<group>"; };
+		8D251517EB02142D38418E53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92735C7FFA43CD474E4F82F3 /* RoomRevealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomRevealView.swift; sourceTree = "<group>"; };
+		931F1A00551D3C66030B781B /* RoomCardGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCardGridView.swift; sourceTree = "<group>"; };
+		9A0DCE5A15B8913D231963B3 /* SessionMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionMessage.swift; sourceTree = "<group>"; };
+		9F92F896754ECA2B0E1EF8F2 /* TipProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipProduct.swift; sourceTree = "<group>"; };
+		A4F97732D941F86F397AA35B /* RiskAxis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskAxis.swift; sourceTree = "<group>"; };
+		AACDF2F7D445F7C00BC16662 /* ParticipantsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsRow.swift; sourceTree = "<group>"; };
+		ADBF7A503DD7D6967EC08C60 /* RiskMatrixGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskMatrixGrid.swift; sourceTree = "<group>"; };
+		C44F6B9026FDA04A73BDF9A3 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		C772DF95FADA5EBCE65F9947 /* CardGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGridView.swift; sourceTree = "<group>"; };
+		C969131BBAEC2C23B84A0565 /* Riskonacci.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Riskonacci.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9D0562EA0F07DABAF27B16A /* RoomEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomEntryView.swift; sourceTree = "<group>"; };
+		CE5391F3BC7B4BF151951DB8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		D05BC17D6B27EFB8E1D28B5B /* SessionTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTransport.swift; sourceTree = "<group>"; };
+		E072F5DE6E91B7AFA25330D3 /* TipJarStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipJarStore.swift; sourceTree = "<group>"; };
+		EAC4E260B2813F2739FA9B8E /* PokerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokerCard.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		18EF8F87AF76747288E0B087 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C772DF95FADA5EBCE65F9947 /* CardGridView.swift */,
+				39D5E3B22222E4ABBE97B426 /* ContentView.swift */,
+				0DDDA58A03EB417E25F79A66 /* DeckPickerView.swift */,
+				AACDF2F7D445F7C00BC16662 /* ParticipantsRow.swift */,
+				190E3D7F94D03489F843BDBC /* PokerCardView.swift */,
+				7A083419B0C86E01069DCC08 /* RevealView.swift */,
+				ADBF7A503DD7D6967EC08C60 /* RiskMatrixGrid.swift */,
+				698FD69B7CED3DB90D172EB9 /* RiskMatrixRevealView.swift */,
+				931F1A00551D3C66030B781B /* RoomCardGridView.swift */,
+				C9D0562EA0F07DABAF27B16A /* RoomEntryView.swift */,
+				92735C7FFA43CD474E4F82F3 /* RoomRevealView.swift */,
+				1A347A3F17E728630B62E4E1 /* RoomView.swift */,
+				2A2EB3E68EEDD71FCB9EBABB /* TipJarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2FEB225B13F204B9458F15ED /* App */ = {
+			isa = PBXGroup;
+			children = (
+				31CA0F003F00D0E849B3392A /* DebugLaunchOptions.swift */,
+				2682CC248602FC2010B82866 /* RiskonacciApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3FDD03D75531F00A1E62458F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2ECE5BB48AD67A15C64E6923 /* MultipeerSessionTransport.swift */,
+				775E2141DA27E2AF9D02A305 /* RoomID.swift */,
+				9A0DCE5A15B8913D231963B3 /* SessionMessage.swift */,
+				491A15013ADE40A75F88046C /* SessionParticipant.swift */,
+				D05BC17D6B27EFB8E1D28B5B /* SessionTransport.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		4903E8659F94BCE3175D07E7 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				E072F5DE6E91B7AFA25330D3 /* TipJarStore.swift */,
+				9F92F896754ECA2B0E1EF8F2 /* TipProduct.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		51CDEDF3BDBC217A9DCC7160 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D251517EB02142D38418E53 /* Assets.xcassets */,
+				CE5391F3BC7B4BF151951DB8 /* Localizable.xcstrings */,
+				0D25A12C1E0EAFF93170444D /* Riskonacci.storekit */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		88FAB683D4BCB5CECE7D67E1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2FEB225B13F204B9458F15ED /* App */,
+				AA0664F97674E9A4FA537F69 /* Models */,
+				3FDD03D75531F00A1E62458F /* Networking */,
+				51CDEDF3BDBC217A9DCC7160 /* Resources */,
+				4903E8659F94BCE3175D07E7 /* Store */,
+				9284724ECA27C7347F2A57E3 /* ViewModels */,
+				18EF8F87AF76747288E0B087 /* Views */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		9284724ECA27C7347F2A57E3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C44F6B9026FDA04A73BDF9A3 /* GameViewModel.swift */,
+				2A0E5381A2DDFAC20C27FF3E /* MultiplayerRoomViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A4FD6AFD21CDC426AC6DD5D9 = {
+			isa = PBXGroup;
+			children = (
+				88FAB683D4BCB5CECE7D67E1 /* Sources */,
+				D98B0E1475EA24BBFC0D8ED5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA0664F97674E9A4FA537F69 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8204AD75B36E137B8B964BC9 /* Deck.swift */,
+				EAC4E260B2813F2739FA9B8E /* PokerCard.swift */,
+				A4F97732D941F86F397AA35B /* RiskAxis.swift */,
+				8CC2BEEB9F62C362CD0FD84B /* RiskLevelColor.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D98B0E1475EA24BBFC0D8ED5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C969131BBAEC2C23B84A0565 /* Riskonacci.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9FE60D102A33A2E253D0C13 /* Riskonacci */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77BC388AAEE5F1480220AB98 /* Build configuration list for PBXNativeTarget "Riskonacci" */;
+			buildPhases = (
+				C3B535C2467587CD976DC6EC /* Sources */,
+				F445DBBC1343D5E0AC8AAF93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Riskonacci;
+			packageProductDependencies = (
+			);
+			productName = Riskonacci;
+			productReference = C969131BBAEC2C23B84A0565 /* Riskonacci.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B9DCE8B14B696B6EB22E4D15 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+					C9FE60D102A33A2E253D0C13 = {
+						DevelopmentTeam = 9J2S23WJH3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 063977CB81221D998E47E5D2 /* Build configuration list for PBXProject "Riskonacci" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				de,
+				en,
+				es,
+				fr,
+				it,
+				ja,
+				ko,
+				nl,
+				pt,
+				ru,
+				"zh-Hans",
+			);
+			mainGroup = A4FD6AFD21CDC426AC6DD5D9;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D98B0E1475EA24BBFC0D8ED5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9FE60D102A33A2E253D0C13 /* Riskonacci */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F445DBBC1343D5E0AC8AAF93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBC74DC1F2D668E95516EC3F /* Assets.xcassets in Resources */,
+				2802F0813B5F4359B2628CAE /* Localizable.xcstrings in Resources */,
+				F460CF13748AC7F20D83A644 /* Riskonacci.storekit in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C3B535C2467587CD976DC6EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1547BE9BB7FF94CED985B5FB /* CardGridView.swift in Sources */,
+				07DC3C43A030A0B9E21B1229 /* ContentView.swift in Sources */,
+				BE8130BBBCE9694F0E39AFEE /* DebugLaunchOptions.swift in Sources */,
+				6E4A9575A22C1421D8F4CB00 /* Deck.swift in Sources */,
+				8736C3F3EEBC6F56596B089E /* DeckPickerView.swift in Sources */,
+				FA2ECF88AA1378159D41ABE4 /* GameViewModel.swift in Sources */,
+				EB2DFFEBF9581087821BFCF4 /* MultipeerSessionTransport.swift in Sources */,
+				1651F0245092AFD06F4C47E5 /* MultiplayerRoomViewModel.swift in Sources */,
+				1306129206DAD8B9C57183E6 /* ParticipantsRow.swift in Sources */,
+				072BDFA1759284BD0EF70ADC /* PokerCard.swift in Sources */,
+				C4DCE50AD499BE47E029B71B /* PokerCardView.swift in Sources */,
+				723052F4B8E2B34B595536F0 /* RevealView.swift in Sources */,
+				9571AF01CACEB9B9188367A4 /* RiskAxis.swift in Sources */,
+				91E99DF5CB8779D984635072 /* RiskLevelColor.swift in Sources */,
+				8493C56927C451C64F21CC13 /* RiskMatrixGrid.swift in Sources */,
+				03325664A38F457A18A5013D /* RiskMatrixRevealView.swift in Sources */,
+				B9DD29BB4D35CB5B7A99AE07 /* RiskonacciApp.swift in Sources */,
+				3FFC4C518C05E5F8C9415B37 /* RoomCardGridView.swift in Sources */,
+				2B28EE08BDFEEBC7409A788E /* RoomEntryView.swift in Sources */,
+				CB282E073402D8870BC99B50 /* RoomID.swift in Sources */,
+				AEC16EECC6129D1EEE555E9B /* RoomRevealView.swift in Sources */,
+				E35F2EAB39829A01B4313704 /* RoomView.swift in Sources */,
+				AC0DB192E978AE3681874F99 /* SessionMessage.swift in Sources */,
+				8CA89E28217A870487C2D9CC /* SessionParticipant.swift in Sources */,
+				153588A9F977D226DDA6A97B /* SessionTransport.swift in Sources */,
+				F592E650F3E0F77A832BF7A8 /* TipJarStore.swift in Sources */,
+				5DE6A856B98145A8D8B4B8BD /* TipJarView.swift in Sources */,
+				95E0E090F74805AFD31D1466 /* TipProduct.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		454FE2A87C0487E5DD754472 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
+				INFOPLIST_FILE = Generated/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = info.cafferata.riskonacci;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8ABB419B0F3584ACCE24D3E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 9J2S23WJH3;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F5D5C363C47931D904FFD80C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 9J2S23WJH3;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FD9F8006089C9FD7A838447A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
+				INFOPLIST_FILE = Generated/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = info.cafferata.riskonacci;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		063977CB81221D998E47E5D2 /* Build configuration list for PBXProject "Riskonacci" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8ABB419B0F3584ACCE24D3E0 /* Debug */,
+				F5D5C363C47931D904FFD80C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		77BC388AAEE5F1480220AB98 /* Build configuration list for PBXNativeTarget "Riskonacci" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				454FE2A87C0487E5DD754472 /* Debug */,
+				FD9F8006089C9FD7A838447A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B9DCE8B14B696B6EB22E4D15 /* Project object */;
+}

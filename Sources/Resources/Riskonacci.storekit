@@ -1,0 +1,59 @@
+{
+  "identifier" : "49536E23-31C0-4001-9E64-928DCE7F587C",
+  "nonRenewingSubscriptions" : [],
+  "products" : [
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "69E45924-54ED-4F6D-A444-C28FA3BB8D0D",
+      "localizations" : [
+        {
+          "description" : "A small espresso-sized thank you.",
+          "displayName" : "Espresso",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "info.cafferata.riskonacci.tip.espresso",
+      "referenceName" : "Espresso Tip",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "2.99",
+      "familyShareable" : false,
+      "internalID" : "24CA39D0-F0C4-4CDE-9F4E-20F760DC53FC",
+      "localizations" : [
+        {
+          "description" : "A cornetto-sized thank you.",
+          "displayName" : "Cornetto",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "info.cafferata.riskonacci.tip.cornetto",
+      "referenceName" : "Cornetto Tip",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "4.99",
+      "familyShareable" : false,
+      "internalID" : "20A2FCD0-CD8C-49F6-B318-D3F944D1AEF1",
+      "localizations" : [
+        {
+          "description" : "An aperitivo-sized thank you.",
+          "displayName" : "Aperitivo",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "info.cafferata.riskonacci.tip.aperitivo",
+      "referenceName" : "Aperitivo Tip",
+      "type" : "Consumable"
+    }
+  ],
+  "settings" : {
+    "_askToBuyEnabled" : false
+  },
+  "subscriptionGroups" : [],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}
