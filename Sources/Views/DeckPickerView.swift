@@ -11,12 +11,19 @@ struct DeckPickerView: View {
                 .listRowSeparator(.hidden)
                 .listRowBackground(Color.clear)
 
-            ForEach(Deck.allCases) { deck in
-                NavigationLink(value: deck) {
-                    Label(String(localized: deck.localizedName), systemImage: deck.symbolName)
-                        .font(.title3)
-                        .padding(.vertical, 6)
+            ForEach(Deck.allCases.filter { $0 != .risk }) { deck in
+                Section {
+                    deckRow(deck)
                 }
+            }
+
+            Color.clear
+                .frame(height: 20)
+                .listRowSeparator(.hidden)
+                .listRowBackground(Color.clear)
+
+            Section {
+                deckRow(.risk)
             }
 
             Section {
@@ -45,6 +52,14 @@ struct DeckPickerView: View {
         }
         .sheet(isPresented: $showsTipJar) {
             TipJarView()
+        }
+    }
+
+    private func deckRow(_ deck: Deck) -> some View {
+        NavigationLink(value: deck) {
+            Label(String(localized: deck.localizedName), systemImage: deck.symbolName)
+                .font(.title3)
+                .padding(.vertical, 6)
         }
     }
 }
