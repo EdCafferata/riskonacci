@@ -6,8 +6,7 @@ struct DeckPickerView: View {
 
     var body: some View {
         List {
-            Color.clear
-                .frame(height: 20)
+            titleRow
                 .listRowSeparator(.hidden)
                 .listRowBackground(Color.clear)
 
@@ -36,23 +35,34 @@ struct DeckPickerView: View {
                 }
             }
         }
-        .navigationTitle("Riskonacci")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar(.hidden, for: .navigationBar)
         .navigationDestination(for: Deck.self) { deck in
             CardGridView(viewModel: viewModel)
                 .onAppear { viewModel.chooseDeck(deck) }
         }
-        .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
-                Button {
-                    showsTipJar = true
-                } label: {
-                    Image(systemName: "heart")
-                }
-            }
-        }
         .sheet(isPresented: $showsTipJar) {
             TipJarView()
         }
+    }
+
+    /// A custom title row instead of the system large title, so the tip
+    /// jar button can sit at the exact same height as "Riskonacci" — the
+    /// system nav bar's toolbar area and the large title live in separate
+    /// rows that can't be vertically aligned against each other.
+    private var titleRow: some View {
+        HStack(alignment: .center) {
+            Text("Riskonacci")
+                .font(.largeTitle.bold())
+            Spacer()
+            Button {
+                showsTipJar = true
+            } label: {
+                Image(systemName: "heart")
+            }
+            .buttonStyle(.glass)
+        }
+        .padding(.top, 20)
     }
 
     private func deckRow(_ deck: Deck) -> some View {
