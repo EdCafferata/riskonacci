@@ -60,7 +60,7 @@ struct RoomEntryView: View {
                 Image(systemName: "person.2.fill")
                     .font(.system(size: 44))
                     .foregroundStyle(Color.accentColor)
-                Text(roomKind == .local ? "Play together, same Wi-Fi network" : "Play together, from anywhere")
+                Text(roomKind == .local ? "Play together with people nearby" : "Play together, from anywhere")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
                     .multilineTextAlignment(.center)

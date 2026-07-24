@@ -36,9 +36,22 @@ struct RoomView: View {
                 ProgressView()
                     .padding(.leading, 4)
             }
+            ShareLink(item: shareMessage) {
+                Label("Share code", systemImage: "square.and.arrow.up")
+                    .labelStyle(.iconOnly)
+            }
+            .padding(.leading, 4)
         }
         .font(.subheadline)
         .padding(.top, 8)
+    }
+
+    /// One tap to hand someone the room code via AirDrop/Messages/etc,
+    /// instead of them having to be told the code and type it in — most
+    /// useful for the nearby (Wi-Fi/Bluetooth) mode when everyone's already
+    /// in the same room.
+    private var shareMessage: String {
+        String(localized: "Join my Riskonacci room:") + " " + room.roomID
     }
 
     private var hostControls: some View {
