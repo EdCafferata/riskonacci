@@ -22,5 +22,11 @@ enum DebugLaunchOptions {
     static var autoJoinRoomID: String? {
         ProcessInfo.processInfo.environment["RISKONACCI_AUTO_JOIN_ROOM"]
     }
+
+    /// "online" or "local" (default) — lets a scripted launch exercise the
+    /// CloudKit transport instead of the local-network mesh.
+    static var autoRoomKind: RoomKind {
+        ProcessInfo.processInfo.environment["RISKONACCI_AUTO_ROOM_KIND"] == "online" ? .online : .local
+    }
 }
 #endif

@@ -58,12 +58,12 @@ final class MultiplayerRoomViewModel {
         selectedDeck == .risk && twoRoundsEnabled
     }
 
-    func hostRoom(nickname: String) {
+    func hostRoom(nickname: String, kind: RoomKind) {
         localNickname = nickname
         roomID = RoomID.generate()
         connectionState = .connecting
 
-        let transport = MultipeerSessionTransport()
+        let transport = Self.makeTransport(kind: kind)
         wire(transport)
         self.transport = transport
         transport.startHosting(roomID: roomID, nickname: nickname)
@@ -72,17 +72,24 @@ final class MultiplayerRoomViewModel {
         connectionState = .connected
     }
 
-    func joinRoom(roomID: String, nickname: String) {
+    func joinRoom(roomID: String, nickname: String, kind: RoomKind) {
         localNickname = nickname
         self.roomID = roomID
         connectionState = .connecting
 
-        let transport = MultipeerSessionTransport()
+        let transport = Self.makeTransport(kind: kind)
         wire(transport)
         self.transport = transport
         transport.join(roomID: roomID, nickname: nickname)
 
         participants = [SessionParticipant(id: transport.localParticipantID, nickname: nickname)]
+    }
+
+    private static func makeTransport(kind: RoomKind) -> SessionTransport {
+        switch kind {
+        case .local: MultipeerSessionTransport()
+        case .online: CloudKitSessionTransport()
+        }
     }
 
     func leave() {
