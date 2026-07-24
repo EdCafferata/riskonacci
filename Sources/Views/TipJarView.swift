@@ -4,6 +4,7 @@ import StoreKit
 struct TipJarView: View {
     @State private var store = TipJarStore()
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.requestReview) private var requestReview
 
     var body: some View {
         NavigationStack {
@@ -86,6 +87,14 @@ struct TipJarView: View {
                 .foregroundStyle(Color.accentColor)
             }
             .padding(.top, 4)
+
+            Button {
+                requestReview()
+            } label: {
+                Label("Rate Riskonacci", systemImage: "star.fill")
+            }
+            .buttonStyle(.glass)
+            .padding(.top, 8)
         }
     }
 
