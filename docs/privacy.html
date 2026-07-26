@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riskonacci — Privacybeleid</title>
+<style>
+  :root {
+    --achtergrond: #14110b;
+    --achtergrond-kaart: #201c14;
+    --accent: #deb460;
+    --tekst: #f5f1e8;
+    --tekst-zacht: #b3ab9a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: radial-gradient(ellipse at top, #241f14 0%, var(--achtergrond) 60%);
+    color: var(--tekst);
+    line-height: 1.6;
+  }
+  .wrapper { max-width: 720px; margin: 0 auto; padding: 60px 24px 80px; }
+  h1 { font-size: 2.2rem; margin-bottom: 8px; }
+  .datum { color: var(--tekst-zacht); font-size: 0.9rem; margin-bottom: 40px; }
+  h2 { font-size: 1.3rem; margin-top: 40px; color: var(--accent); }
+  p, li { color: var(--tekst-zacht); }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Privacybeleid — Riskonacci</h1>
+    <p class="datum">Laatst bijgewerkt: 26 juli 2026</p>
+
+    <p>Riskonacci (The IT Crowd, Ed Cafferata) is een planning-poker-app voor
+    iOS en Android. Deze pagina geldt voor beide versies.</p>
+
+    <h2>Welke gegevens verzamelt Riskonacci?</h2>
+    <p>Geen persoonsgegevens, geen account, geen advertentie-identifiers en
+    geen analytics. Er is geen registratie of login nodig om de app te
+    gebruiken.</p>
+
+    <h2>Samen spelen ("Play together")</h2>
+    <p>Als je een room host of joint, gebruikt de app Firebase (Firestore +
+    Anonymous Auth) als tijdelijke relay tussen deelnemers. Elk toestel krijgt
+    daarbij automatisch een willekeurige, anonieme technische ID — er wordt
+    geen naam, e-mailadres of ander identificerend gegeven opgevraagd of
+    opgeslagen. De enige gegevens die kort in Firebase staan zijn: de
+    gekozen weergavenaam voor de room, het gekozen kaartdeck, en ieders
+    gestemde kaart. Zodra je de room verlaat, verwijdert je eigen toestel die
+    gegevens weer. Er is geen eigen server — Firebase is de enige derde
+    partij, uitsluitend als matchmaking/relay tussen deelnemers tijdens een
+    sessie.</p>
+
+    <h2>Wat wordt er lokaal opgeslagen?</h2>
+    <p>Je taalvoorkeur en laatst gebruikte deck/instellingen worden lokaal op
+    je toestel bewaard (iOS: <code>UserDefaults</code>, Android:
+    <code>SharedPreferences</code>), puur voor je eigen gemak. Dit verlaat
+    nooit je toestel.</p>
+
+    <h2>Fooienpot (in-app aankoop)</h2>
+    <p>De vrijwillige fooienpot loopt op iOS via Apples StoreKit en (zodra
+    beschikbaar) op Android via Google Play Billing. Betaalgegevens en
+    aankoopgeschiedenis lopen volledig via je Apple- of Google-account en
+    worden door hen verwerkt volgens hun eigen privacybeleid — Riskonacci
+    ziet of bewaart zelf geen betaalgegevens.</p>
+
+    <h2>Contact</h2>
+    <p>Vragen over dit privacybeleid? Mail naar
+    <a href="mailto:edcafferata@icloud.com">edcafferata@icloud.com</a>.</p>
+  </div>
+</body>
+</html>
