@@ -20,13 +20,6 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-	<key>NSBonjourServices</key>
-	<array>
-		<string>_riskonacci-p2p._tcp</string>
-		<string>_riskonacci-p2p._udp</string>
-	</array>
-	<key>NSLocalNetworkUsageDescription</key>
-	<string>Riskonacci uses your local network to connect your device to teammates in the same room for live planning poker sessions.</string>
 	<key>UILaunchScreen</key>
 	<dict/>
 	<key>UISupportedInterfaceOrientations</key>

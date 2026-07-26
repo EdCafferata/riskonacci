@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct RiskMatrixDot: Identifiable {
-    let id: UUID
+    let id: String
     let likelihoodIndex: Int
     let impactIndex: Int
     /// A short label (e.g. an initial) shown inside the dot — used in the
@@ -20,7 +20,7 @@ struct RiskMatrixGrid: View {
     private let size = 5
 
     init(likelihoodIndex: Int, impactIndex: Int) {
-        dots = [RiskMatrixDot(id: UUID(), likelihoodIndex: likelihoodIndex, impactIndex: impactIndex, label: nil, tint: .white)]
+        dots = [RiskMatrixDot(id: UUID().uuidString, likelihoodIndex: likelihoodIndex, impactIndex: impactIndex, label: nil, tint: .white)]
     }
 
     init(dots: [RiskMatrixDot]) {

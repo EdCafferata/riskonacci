@@ -10,11 +10,11 @@ enum SessionMessage: Codable {
     case roster([SessionParticipant])
     case deckChanged(Deck)
     case settingsChanged(twoRoundsEnabled: Bool)
-    case vote(participantID: UUID, round: RiskRound?, cardLabel: String)
-    case clearVote(participantID: UUID)
+    case vote(participantID: String, round: RiskRound?, cardLabel: String)
+    case clearVote(participantID: String)
     /// Stepping back one round (e.g. Impact → Likelihood) to change an
     /// answer, without discarding the other round's vote too.
-    case clearRoundVote(participantID: UUID, round: RiskRound)
+    case clearRoundVote(participantID: String, round: RiskRound)
     case reset
     case reveal
 }

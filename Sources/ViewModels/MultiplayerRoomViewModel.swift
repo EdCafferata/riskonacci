@@ -14,15 +14,14 @@ struct VoteState {
     }
 }
 
-/// Room state for a live multiplayer session, backed by a full mesh (see
-/// `MultipeerSessionTransport`) rather than a hub-and-spoke: every device is
-/// directly connected to every other device. That makes host migration a
-/// non-event rather than a protocol — "host" isn't a role assigned at
-/// connect time, it's whoever currently has the lexicographically smallest
-/// participant ID among everyone still connected, recomputed independently
-/// by each device from its own (directly-observed) participant list. If the
-/// host disappears, everyone else already agrees on who's next without any
-/// handoff message.
+/// Room state for a live multiplayer session, backed by Firebase
+/// (`FirebaseSessionTransport`) — every device reads/writes the same
+/// Firestore room, so "host" isn't a role assigned at connect time, it's
+/// whoever currently has the lexicographically smallest participant ID
+/// among everyone still present, recomputed independently by each device
+/// from its own view of the participant list. If the host disappears,
+/// everyone else already agrees on who's next without any handoff
+/// message.
 @MainActor
 @Observable
 final class MultiplayerRoomViewModel {
@@ -30,7 +29,7 @@ final class MultiplayerRoomViewModel {
     private(set) var participants: [SessionParticipant] = []
     private(set) var selectedDeck: Deck = .risk
     var twoRoundsEnabled = true
-    private(set) var votes: [UUID: VoteState] = [:]
+    private(set) var votes: [String: VoteState] = [:]
     private(set) var isRevealed = false
     private(set) var connectionState: ConnectionState = .idle
 
@@ -41,13 +40,13 @@ final class MultiplayerRoomViewModel {
     private var transport: SessionTransport?
     private var localNickname = ""
 
-    var localParticipantID: UUID? { transport?.localParticipantID }
+    var localParticipantID: String? { transport?.localParticipantID }
 
     /// Lexicographically smallest participant ID currently connected —
     /// the same rule evaluated independently on every device, so they
     /// always agree without needing to coordinate.
-    var hostID: UUID? {
-        participants.map(\.id).min { $0.uuidString < $1.uuidString }
+    var hostID: String? {
+        participants.map(\.id).min()
     }
 
     var isHost: Bool {
@@ -58,12 +57,12 @@ final class MultiplayerRoomViewModel {
         selectedDeck == .risk && twoRoundsEnabled
     }
 
-    func hostRoom(nickname: String, kind: RoomKind) {
+    func hostRoom(nickname: String) {
         localNickname = nickname
         roomID = RoomID.generate()
         connectionState = .connecting
 
-        let transport = Self.makeTransport(kind: kind)
+        let transport = FirebaseSessionTransport()
         wire(transport)
         self.transport = transport
         transport.startHosting(roomID: roomID, nickname: nickname)
@@ -72,24 +71,17 @@ final class MultiplayerRoomViewModel {
         connectionState = .connected
     }
 
-    func joinRoom(roomID: String, nickname: String, kind: RoomKind) {
+    func joinRoom(roomID: String, nickname: String) {
         localNickname = nickname
         self.roomID = roomID
         connectionState = .connecting
 
-        let transport = Self.makeTransport(kind: kind)
+        let transport = FirebaseSessionTransport()
         wire(transport)
         self.transport = transport
         transport.join(roomID: roomID, nickname: nickname)
 
         participants = [SessionParticipant(id: transport.localParticipantID, nickname: nickname)]
-    }
-
-    private static func makeTransport(kind: RoomKind) -> SessionTransport {
-        switch kind {
-        case .local: MultipeerSessionTransport()
-        case .online: CloudKitSessionTransport()
-        }
     }
 
     func leave() {
@@ -103,9 +95,10 @@ final class MultiplayerRoomViewModel {
 
     // MARK: Host-only actions
     // "Host-only" is enforced by the `isHost` guard below, not by only the
-    // host being able to reach the network — in the mesh, anyone could
-    // technically send these, they just won't take effect locally unless
-    // the election agrees they're host.
+    // host being able to reach the network — anyone could technically
+    // send these, they just won't take effect locally unless the
+    // election agrees they're host, and Firestore's security rules only
+    // let a current participant write the shared room document at all.
 
     func selectDeck(_ deck: Deck) {
         guard isHost else { return }
@@ -137,7 +130,7 @@ final class MultiplayerRoomViewModel {
     // MARK: Voting (any participant)
 
     /// The round the participant hasn't voted on yet, or nil once both are done.
-    func currentRound(for participantID: UUID) -> RiskRound? {
+    func currentRound(for participantID: String) -> RiskRound? {
         guard isTwoRoundFlow else { return nil }
         let vote = votes[participantID]
         if vote?.likelihoodLabel == nil { return .likelihood }
@@ -166,7 +159,7 @@ final class MultiplayerRoomViewModel {
         transport?.send(.vote(participantID: localID, round: round, cardLabel: card.label))
     }
 
-    func hasVoted(_ participantID: UUID) -> Bool {
+    func hasVoted(_ participantID: String) -> Bool {
         votes[participantID]?.hasVoted ?? false
     }
 
@@ -209,7 +202,7 @@ final class MultiplayerRoomViewModel {
         }
     }
 
-    private func handlePeerConnected(id: UUID, nickname: String) {
+    private func handlePeerConnected(id: String, nickname: String) {
         connectionState = .connected
         if !participants.contains(where: { $0.id == id }) {
             participants.append(SessionParticipant(id: id, nickname: nickname))
@@ -224,18 +217,18 @@ final class MultiplayerRoomViewModel {
         }
     }
 
-    private func handlePeerDisconnected(id: UUID) {
+    private func handlePeerDisconnected(id: String) {
         participants.removeAll { $0.id == id }
         votes[id] = nil
     }
 
-    private func handle(_ message: SessionMessage, from senderID: UUID) {
+    private func handle(_ message: SessionMessage, from senderID: String) {
         switch message {
         case .hello:
             break // handled by the transport itself to resolve identity
 
         case .roster:
-            break // no longer used — the mesh means everyone builds their own roster directly
+            break // no longer used — everyone builds their own roster directly
 
         case .deckChanged(let deck):
             selectedDeck = deck

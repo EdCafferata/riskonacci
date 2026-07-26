@@ -4,12 +4,22 @@ options:
   deploymentTarget:
     iOS: "26.0"
   createIntermediateGroups: true
+packages:
+  FirebaseSDK:
+    url: https://github.com/firebase/firebase-ios-sdk
+    from: 12.0.0
 targets:
   Riskonacci:
     type: application
     platform: iOS
     sources:
       - path: Sources
+      - path: GoogleService-Info.plist
+    dependencies:
+      - package: FirebaseSDK
+        product: FirebaseFirestore
+      - package: FirebaseSDK
+        product: FirebaseAuth
     info:
       path: Generated/Info.plist
       properties:
@@ -19,10 +29,6 @@ targets:
           - UIInterfaceOrientationPortrait
           - UIInterfaceOrientationLandscapeLeft
           - UIInterfaceOrientationLandscapeRight
-        NSLocalNetworkUsageDescription: Riskonacci uses your local network to connect your device to teammates in the same room for live planning poker sessions.
-        NSBonjourServices:
-          - _riskonacci-p2p._tcp
-          - _riskonacci-p2p._udp
     settings:
       base:
         SWIFT_VERSION: "6.0"
@@ -36,7 +42,6 @@ targets:
         CODE_SIGN_STYLE: Automatic
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
-        CODE_SIGN_ENTITLEMENTS: Riskonacci.entitlements
       configs:
         Debug:
           SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEBUG

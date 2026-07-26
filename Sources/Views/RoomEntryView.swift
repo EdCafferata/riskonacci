@@ -1,15 +1,16 @@
 import SwiftUI
 
-/// Entry point for multiplayer: pick a nickname and a room type (nearby
-/// Wi-Fi or online via CloudKit), then either host a new room (gets a fresh
-/// 5-character code to share) or join one with a code from someone else.
+/// Entry point for multiplayer: pick a nickname, then either host a new
+/// room (gets a fresh 5-character code to share) or join one with a code
+/// from someone else. Works the same whether everyone's on the same
+/// Wi-Fi or scattered anywhere with a connection — and the same whether
+/// the other player is on iPhone or Android — since every device just
+/// talks to the same shared Firebase room.
 struct RoomEntryView: View {
     @State private var room = MultiplayerRoomViewModel()
     @State private var nickname = ""
     @State private var joinCode = ""
     @State private var mode: Mode = .choosing
-    @State private var roomKind: RoomKind = .local
-    @State private var iCloudUnavailable = false
 
     private enum Mode {
         case choosing, joining
@@ -29,28 +30,14 @@ struct RoomEntryView: View {
             #if DEBUG
             if let name = DebugLaunchOptions.autoHostNickname, room.connectionState == .idle {
                 nickname = name
-                room.hostRoom(nickname: name, kind: DebugLaunchOptions.autoRoomKind)
+                room.hostRoom(nickname: name)
             } else if let name = DebugLaunchOptions.autoJoinNickname,
                       let code = DebugLaunchOptions.autoJoinRoomID,
                       room.connectionState == .idle {
                 nickname = name
-                room.joinRoom(roomID: code, nickname: name, kind: DebugLaunchOptions.autoRoomKind)
+                room.joinRoom(roomID: code, nickname: name)
             }
             #endif
-        }
-    }
-
-    private func startIfPossible(_ action: @escaping () -> Void) {
-        guard roomKind == .online else {
-            action()
-            return
-        }
-        Task {
-            if await CloudKitAccountStatus.isAvailable() {
-                action()
-            } else {
-                iCloudUnavailable = true
-            }
         }
     }
 
@@ -60,27 +47,12 @@ struct RoomEntryView: View {
                 Image(systemName: "person.2.fill")
                     .font(.system(size: 44))
                     .foregroundStyle(Color.accentColor)
-                Text(roomKind == .local ? "Play together with people nearby" : "Play together, from anywhere")
+                Text("Play together, from anywhere")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
                     .multilineTextAlignment(.center)
             }
             .padding(.top, 24)
-
-            Picker("Room type", selection: $roomKind) {
-                Text("Nearby").tag(RoomKind.local)
-                Text("Online").tag(RoomKind.online)
-            }
-            .pickerStyle(.segmented)
-            .padding(.horizontal)
-
-            if iCloudUnavailable {
-                Text("Sign in to iCloud in Settings to play online.")
-                    .font(.footnote)
-                    .foregroundStyle(.red)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal)
-            }
 
             TextField("Your name", text: $nickname)
                 .textFieldStyle(.plain)
@@ -100,10 +72,7 @@ struct RoomEntryView: View {
 
             VStack(spacing: 14) {
                 Button {
-                    iCloudUnavailable = false
-                    startIfPossible {
-                        room.hostRoom(nickname: trimmedNickname, kind: roomKind)
-                    }
+                    room.hostRoom(nickname: trimmedNickname)
                 } label: {
                     Text("Host a room")
                         .frame(maxWidth: .infinity)
@@ -115,10 +84,7 @@ struct RoomEntryView: View {
 
                 if mode == .joining {
                     Button {
-                        iCloudUnavailable = false
-                        startIfPossible {
-                            room.joinRoom(roomID: joinCode.uppercased(), nickname: trimmedNickname, kind: roomKind)
-                        }
+                        room.joinRoom(roomID: joinCode.uppercased(), nickname: trimmedNickname)
                     } label: {
                         Text("Join")
                             .frame(maxWidth: .infinity)
