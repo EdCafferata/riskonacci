@@ -43,7 +43,7 @@
           "locale" : "en_US"
         }
       ],
-      "productID" : "info.cafferata.riskonacci.tip.aperitivo",
+      "productID" : "info.cafferata.riskonacci.tip.aperetivo",
       "referenceName" : "Aperitivo Tip",
       "type" : "Consumable"
     }

@@ -3,7 +3,7 @@ import Foundation
 enum TipProduct: String, CaseIterable {
     case espresso = "info.cafferata.riskonacci.tip.espresso"
     case cornetto = "info.cafferata.riskonacci.tip.cornetto"
-    case aperitivo = "info.cafferata.riskonacci.tip.aperitivo"
+    case aperitivo = "info.cafferata.riskonacci.tip.aperetivo"
 
     var displayName: String {
         switch self {

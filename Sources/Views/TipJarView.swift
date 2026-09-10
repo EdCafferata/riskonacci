@@ -25,6 +25,29 @@ struct TipJarView: View {
                         }
                         .padding(.top, 24)
 
+                        #if DEBUG
+                        if ProcessInfo.processInfo.environment["RISKONACCI_MOCK_TIP_PRODUCTS"] != nil {
+                            GlassEffectContainer(spacing: 14) {
+                                VStack(spacing: 14) {
+                                    ForEach(TipProduct.allCases, id: \.self) { tip in
+                                        mockTipRow(for: tip)
+                                    }
+                                }
+                            }
+                            .padding(.horizontal)
+                        } else if store.isLoading {
+                            ProgressView()
+                        } else {
+                            GlassEffectContainer(spacing: 14) {
+                                VStack(spacing: 14) {
+                                    ForEach(store.products) { product in
+                                        tipButton(for: product)
+                                    }
+                                }
+                            }
+                            .padding(.horizontal)
+                        }
+                        #else
                         if store.isLoading {
                             ProgressView()
                         } else {
@@ -37,6 +60,7 @@ struct TipJarView: View {
                             }
                             .padding(.horizontal)
                         }
+                        #endif
 
                         if let message = store.lastTipMessage {
                             Text(message)
@@ -107,6 +131,32 @@ struct TipJarView: View {
             .padding(.top, 4)
         }
     }
+
+    #if DEBUG
+    /// Renders the same row layout as `tipButton(for:)` without a real
+    /// `Product` — `Product` has no public initializer, so this is the only
+    /// way to show the tip jar's intended look (e.g. for an App Store
+    /// Connect review screenshot) without a live StoreKit test session.
+    private func mockTipRow(for tip: TipProduct) -> some View {
+        let price: String = switch tip {
+        case .espresso: "$0.99"
+        case .cornetto: "$2.99"
+        case .aperitivo: "$4.99"
+        }
+        return HStack {
+            Image(systemName: tip.symbolName)
+                .foregroundStyle(Color.accentColor)
+                .frame(width: 28)
+            Text(tip.displayName)
+            Spacer()
+            Text(price)
+                .foregroundStyle(.secondary)
+        }
+        .padding()
+        .contentShape(.rect)
+        .glassEffect(.regular.interactive(), in: .rect(cornerRadius: 16))
+    }
+    #endif
 
     private func tipButton(for product: Product) -> some View {
         let tip = TipProduct(rawValue: product.id)

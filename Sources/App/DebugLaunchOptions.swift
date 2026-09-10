@@ -22,5 +22,11 @@ enum DebugLaunchOptions {
     static var autoJoinRoomID: String? {
         ProcessInfo.processInfo.environment["RISKONACCI_AUTO_JOIN_ROOM"]
     }
+
+    /// Same idea, for capturing the Tip Jar sheet (e.g. for an App Store
+    /// Connect IAP review screenshot) without tapping through the UI.
+    static var autoShowTipJar: Bool {
+        ProcessInfo.processInfo.environment["RISKONACCI_AUTO_SHOW_TIP_JAR"] != nil
+    }
 }
 #endif

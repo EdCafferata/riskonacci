@@ -44,6 +44,13 @@ struct DeckPickerView: View {
         .sheet(isPresented: $showsTipJar) {
             TipJarView()
         }
+        #if DEBUG
+        .onAppear {
+            if DebugLaunchOptions.autoShowTipJar {
+                showsTipJar = true
+            }
+        }
+        #endif
     }
 
     /// A custom title row instead of the system large title, so the tip
