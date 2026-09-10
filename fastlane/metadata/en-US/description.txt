@@ -1,0 +1,18 @@
+Riskonacci is a free, native planning poker app for agile and lean teams — with something almost no other planning poker app offers: a dedicated Risk card type alongside the usual story-point estimates.
+
+MULTIPLE DECKS
+Estimate with Fibonacci, a Standard deck, T-Shirt sizes, or a separate Risk deck (None, Low, Medium, High, Critical) with its own colors and icons — not just recycled Fibonacci numbers.
+
+LIKELIHOOD × IMPACT
+Turn on the optional two-round mode: first vote Likelihood, then Impact. The result is shown in a 5×5 risk matrix (green to red heat map) with everyone's vote as a dot.
+
+PLAY TOGETHER, ANYWHERE
+Host shares a short 5-character room ID; participants join with it — everyone sees the same live vote in real time.
+
+MADE FOR FOCUS
+- Runs on iPhone, iPad and Mac
+- 10 languages
+- No account, no sign-in, no ads
+- Free, with an optional tip jar if you'd like to support development
+
+Riskonacci keeps things lightweight and private: each device gets an anonymous ID, and participant/vote records are removed as soon as someone leaves a room.

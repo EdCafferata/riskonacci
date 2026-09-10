@@ -1,0 +1,18 @@
+Riskonacci is een gratis, native planning-poker-app voor agile- en lean-teams — met iets wat vrijwel geen andere planning-poker-app biedt: een apart Risico-kaarttype naast de gebruikelijke story-point-schattingen.
+
+MEERDERE DECKS
+Schat met Fibonacci, een Standaard-deck, T-shirtmaten of een apart Risico-deck (Geen, Laag, Middel, Hoog, Kritiek) met eigen kleuren en iconen — geen hergebruikte Fibonacci-cijfers.
+
+LIKELIHOOD × IMPACT
+Zet de optionele twee-rondes-modus aan: stem eerst Likelihood, dan Impact. Het resultaat verschijnt in een 5×5-risicomatrix (groen naar rood) met ieders stem als bolletje.
+
+SAMEN SPELEN, OVERAL
+De host deelt een kort room-ID van 5 tekens; deelnemers joinen ermee — iedereen ziet dezelfde stemming live in real time.
+
+GEMAAKT VOOR FOCUS
+- Draait op iPhone, iPad en Mac
+- 10 talen
+- Geen account, geen inlog, geen advertenties
+- Gratis, met een optionele fooienpot als je de ontwikkeling wilt steunen
+
+Riskonacci houdt het licht en privé: elk toestel krijgt een anoniem ID, en deelnemer-/stemrecords worden verwijderd zodra iemand een room verlaat.
