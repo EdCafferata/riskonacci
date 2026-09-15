@@ -1,0 +1,74 @@
+default_platform(:ios)
+
+# App Store Connect API — Admin-key 5R3497VHF5 (cloud-managed distribution werkt hiermee)
+API_KEY = app_store_connect_api_key(
+  key_id:       "5R3497VHF5",
+  issuer_id:    "69a6de7f-a9c3-47e3-e053-5b8c7c11a4d1",
+  key_filepath: "#{Dir.home}/.appstoreconnect/private_keys/AuthKey_5R3497VHF5.p8"
+)
+
+SCHEME    = "Riskonacci"
+PROJECT   = "Riskonacci.xcodeproj"
+BUNDLE_ID = "info.cafferata.riskonacci"
+
+platform :ios do
+  # ─── iOS build → TestFlight ───────────────────────────────────────────────
+  # Automatic signing + cloud-managed distribution via de Admin-key.
+  desc "Bouw iOS-archive en upload naar TestFlight"
+  lane :beta do
+    build_app(
+      project:       PROJECT,
+      scheme:        SCHEME,
+      configuration: "Release",
+      export_method: "app-store",
+      xcargs: "-allowProvisioningUpdates " \
+              "-authenticationKeyPath #{Dir.home}/.appstoreconnect/private_keys/AuthKey_5R3497VHF5.p8 " \
+              "-authenticationKeyID 5R3497VHF5 " \
+              "-authenticationKeyIssuerID 69a6de7f-a9c3-47e3-e053-5b8c7c11a4d1",
+      export_options: { signingStyle: "automatic", teamID: "9J2S23WJH3" }
+    )
+    upload_to_testflight(api_key: API_KEY, skip_waiting_for_build_processing: true)
+  end
+
+  # ─── Metadata uploaden (versie in voorbereiding) ─────────────────────────
+  desc "Upload beschrijving/keywords/etc. naar App Store Connect"
+  lane :metadata do
+    upload_to_app_store(
+      api_key:                    API_KEY,
+      app_identifier:             BUNDLE_ID,
+      skip_binary_upload:         true,
+      skip_screenshots:           true,
+      force:                      true,
+      run_precheck_before_submit: false,
+      metadata_path:              "fastlane/metadata"
+    )
+  end
+
+  # ─── Build 1 aan versie 1.0 koppelen + indienen ter review ───────────────
+  # LET OP: 'Submit to App Review' wordt door Claude Code's classifier geblokkeerd —
+  # de laatste indien-stap doet Ed zelf (CLI of ASC-webUI). Zie SUBMISSION_PLAN.md.
+  desc "Koppel build aan 1.0 en dien in (draai Ed zelf)"
+  lane :submit do
+    upload_to_app_store(
+      api_key:                    API_KEY,
+      app_identifier:             BUNDLE_ID,
+      platform:                   "ios",
+      skip_binary_upload:         true,
+      skip_metadata:              true,
+      skip_screenshots:           true,
+      force:                      true,
+      run_precheck_before_submit: false,
+      submit_for_review:          true,
+      automatic_release:          false,
+      submission_information: {
+        export_compliance_uses_encryption: false,
+        add_id_info_uses_idfa:              false
+      }
+    )
+  end
+end
+
+# ── Mac Catalyst (Mac App Store) ────────────────────────────────────────────
+# Riskonacci draait ook als Mac-app (Catalyst). Mac-distributie loopt via de
+# Mac App Store onder DEZELFDE app-record, maar met een eigen binary + eigen
+# Mac-screenshots. Build-commando en aandachtspunten: zie SUBMISSION_PLAN.md.
