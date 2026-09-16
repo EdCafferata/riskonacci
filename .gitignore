@@ -41,3 +41,9 @@ fastlane/test_output
 
 # macOS
 .DS_Store
+
+# Build-artefacten (fastlane/gym export)
+Riskonacci.app/
+Riskonacci.pkg
+*.xcarchive
+/build/
