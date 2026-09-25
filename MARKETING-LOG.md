@@ -19,3 +19,12 @@
   Claims geverifieerd: 11 talen (en + 10), geen ad-SDK, open source GPL-3.0, Android-poort = Kotlin. Mac/Play-beschikbaarheid
   bewust NIET geclaimd tot Ed bevestigt.
 - Open voor Ed: accounts PH/HN/IH/AlternativeTo, akkoord Oscar Sarruco voor credit, beheerde sessie voor gallery-beelden.
+
+## 2026-09-26 (00:12-run)
+- **Short-video-scripts #01 + screenshot-overlays (draft)** — `marketing/short-video-scripts-01.md`: 10 clips (15–30 s,
+  9:16) voor LinkedIn/Shorts met tijdlijn + in-beeldtekst, gebaseerd op echte UI-labels/decks uit de code; postvolgorde.
+  Plus overlayteksten voor een 6-schermen-App Store-set in alle 11 app-talen (ja/ko/zh-Hans/ru: native check).
+  Opnemen kan alleen in een beheerde sessie.
+- **Outreach-pitchtemplates (draft)** — `marketing/OUTREACH-PITCHES.md`: spelregels tegen spam, doelgroepentabel,
+  templates lijstje-auteur (EN+NL), nieuwsbrief, coach-DM, podcast, 1 follow-up. Niets verstuurd; eerst concrete contacten.
+- Open voor Ed: beheerde opname-sessie, afzender kiezen, artikel #01 publiceren.
