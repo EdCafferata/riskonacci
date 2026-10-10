@@ -4,7 +4,7 @@ _Doel: Riskonacci (gratis planning-poker + risk-matrix app voor agile/scrum-team
 
 ## 0. Status
 - **iOS: LIVE sinds 2026-09-18** — https://apps.apple.com/nl/app/riskonacci/id6807144804 (id 6807144804).
-- **macOS (Catalyst):** goedkeuring nog bevestigen in ASC. **Android-poort** bestaat (`riskonacci-android`, gedeeld Firebase) — Play-status bevestigen.
+- **macOS (Catalyst): REJECTED** (ASC-API 10 okt 2026; reden in Resolution Center, Ed kijkt) → **Mac nergens claimen** tot dit is opgelost; de "iPhone, iPad en Mac"-kernboodschap in §1 geldt tot dan als "iPhone en iPad". **Android-poort** bestaat (`riskonacci-android`, gedeeld Firebase) — Play-status bevestigen.
 - **Monetisatie = tip-jar** (Espresso/Cornetto/Aperitivo, $0.99/$2.99/$4.99), géén abo. Dit is een **groei-/reputatietool**, niet een cash-cow; echte omzet komt later evt. via een **Pro/Team-tier** (zie §7). Kernwaarde nu: adoptie, naamsbekendheid, reviews, tips.
 
 ## 1. Positionering

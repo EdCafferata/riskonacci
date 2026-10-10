@@ -47,3 +47,11 @@
   op artikel #01/#02; kaartlabels (None→Critical) en GPL-3.0/publieke repo gecheckt. Plan-doel "15–20 posts" hiermee gehaald (18).
 - Open voor Ed: macOS-afwijzing bekijken (reden staat in Resolution Center), batch #01 + #02 inplannen, artikelen publiceren,
   beslissing Pro/Team-tier.
+
+## 2026-10-10 (18:12-run)
+- Geen nieuwe mail van Ed; OG Consent nog geblokkeerd; ASC ongewijzigd (iOS live, macOS REJECTED).
+- **Facilitator-guide "Een risicoronde in 15 minuten" (draft, EN+NL)** — `marketing/facilitator-guide-risk-round.md`:
+  plan §4 "sjablonen". Bruikbaar zonder de app (schalen, 6 stappen, 4 acties, ingevuld voorbeeld), app alleen in de slotregel;
+  hergebruik als LinkedIn-carrousel/dev.to/PDF. Schalen en NL-labels gecheckt tegen `RiskAxis.swift` + `Localizable.xcstrings`.
+- `MARKETING-PLAN.md` §0 bijgewerkt: macOS = REJECTED, Mac niet claimen.
+- Open voor Ed: publicatievorm kiezen, beheerde sessie voor matrix-screenshot; verder ongewijzigd (macOS-afwijzing, Pro/Team-tier).
