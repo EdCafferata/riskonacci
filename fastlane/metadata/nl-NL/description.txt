@@ -15,4 +15,4 @@ GEMAAKT VOOR FOCUS
 - Geen account, geen inlog, geen advertenties
 - Gratis, met een optionele fooienpot als je de ontwikkeling wilt steunen
 
-Riskonacci houdt het licht en privé: elk toestel krijgt een anoniem ID, en deelnemer-/stemrecords worden verwijderd zodra iemand een room verlaat.
+Riskonacci houdt het licht en privé: je hebt geen account of login nodig, elk toestel krijgt gewoon een willekeurig ID, en deelnemer-/stemrecords worden verwijderd zodra iemand een room verlaat.

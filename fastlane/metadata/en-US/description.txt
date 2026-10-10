@@ -15,4 +15,4 @@ MADE FOR FOCUS
 - No account, no sign-in, no ads
 - Free, with an optional tip jar if you'd like to support development
 
-Riskonacci keeps things lightweight and private: each device gets an anonymous ID, and participant/vote records are removed as soon as someone leaves a room.
+Riskonacci keeps things lightweight and private: no account or sign-in is needed, each device simply gets a random ID, and participant/vote records are removed as soon as someone leaves a room.
