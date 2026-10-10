@@ -28,3 +28,11 @@
 - **Outreach-pitchtemplates (draft)** — `marketing/OUTREACH-PITCHES.md`: spelregels tegen spam, doelgroepentabel,
   templates lijstje-auteur (EN+NL), nieuwsbrief, coach-DM, podcast, 1 follow-up. Niets verstuurd; eerst concrete contacten.
 - Open voor Ed: beheerde opname-sessie, afzender kiezen, artikel #01 publiceren.
+
+## 2026-10-10 (12:12-run, na ~2 weken stilstand — app stond dicht van 26 sep t/m 10 okt)
+- **ASC-status gecheckt:** iOS 1.0 = READY_FOR_SALE (live); **macOS 1.0 = REJECTED** → Mac App Store nergens claimen.
+  Afwijzingsreden staat alleen in het Resolution Center/Eds iCloud-mail (niet via de API leesbaar) → gemaild aan Ed.
+- **Artikel #02 (draft, NL+EN)** — `marketing/article-02-effort-vs-risk-round.md`: "Effort round or risk round: which one
+  does this backlog item need?" — vergelijking op methode-niveau (inspanning / risico / kans × impact) met vuistregel-tabel;
+  app pas in slotalinea, geen concurrenten bij naam. Kaartlabels gecheckt tegen `Deck.swift`.
+- Open voor Ed: macOS-afwijzing bekijken, artikel #01 + #02 publiceren, beslissing Pro/Team-tier.
