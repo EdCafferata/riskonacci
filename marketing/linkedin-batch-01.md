@@ -39,7 +39,7 @@ Maar in bijna geen enkele kun je ook **risico** schatten. En juist dáár gaat h
 Riskonacci heeft naast Fibonacci en T-shirtmaten een apart Risk-deck, en een optionele Kans × Impact-ronde met een 5×5-matrix.
 
 ✔ Gratis, geen account, geen advertenties
-✔ Realtime met je team op iPhone, iPad en Mac
+✔ Realtime met je team op iPhone en iPad
 ✔ 10 talen
 
 Link in de eerste reactie. Ik hoor graag wat je mist.
@@ -162,7 +162,7 @@ Remote refinement tip: stop estimating in chat.
 
 "I'd say 5" in Slack isn't planning poker — the first number anchors everyone else.
 
-Use anything that reveals cards at the same time. (Riskonacci does this realtime on iPhone, iPad and Mac, free — but a hidden-vote Google Form works too.)
+Use anything that reveals cards at the same time. (Riskonacci does this realtime on iPhone and iPad, free — but a hidden-vote Google Form works too.)
 
 The point is simultaneous reveal, not the app.
 
@@ -171,8 +171,8 @@ The point is simultaneous reveal, not the app.
 ---
 
 ## Eerste-reactie-tekst (bij posts met app-verwijzing)
-- EN: "Free on the App Store (iPhone, iPad, Mac): https://apps.apple.com/app/riskonacci/id6807144804"
-- NL: "Gratis in de App Store (iPhone, iPad, Mac): https://apps.apple.com/nl/app/riskonacci/id6807144804"
+- EN: "Free on the App Store (iPhone, iPad): https://apps.apple.com/app/riskonacci/id6807144804"
+- NL: "Gratis in de App Store (iPhone, iPad): https://apps.apple.com/nl/app/riskonacci/id6807144804"
 
 ## Checklist voor Ed
 - [ ] Posts 1–10 inplannen (LinkedIn heeft een ingebouwde planner: "Plannen" bij een nieuwe post).

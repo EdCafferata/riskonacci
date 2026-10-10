@@ -16,7 +16,7 @@ L = {
  "en-GB": dict(
   subtitle="Scrum poker & risk matrix",
   keywords="planning,estimate,agile,story,points,fibonacci,sprint,likelihood,impact,pointing,refinement,team",
-  promo="Estimate effort and risk together. Planning poker with a built-in Risk deck and Likelihood × Impact matrix — live on iPhone, iPad and Mac. Free, no sign-up."),
+  promo="Estimate effort and risk together. Planning poker with a built-in Risk deck and Likelihood × Impact matrix — live on iPhone and iPad. Free, no sign-up."),
  "nl-NL": dict(
   subtitle="Planning poker met risico",
   keywords="scrum,agile,schatten,story,points,fibonacci,sprint,risicomatrix,kans,impact,refinement,team",
@@ -36,7 +36,7 @@ L = {
  "es-MX": dict(
   subtitle="Scrum poker y riesgos",
   keywords="planning,agile,ágil,estimación,puntos,historia,fibonacci,sprint,matriz,probabilidad,equipo",
-  promo="Estima esfuerzo y riesgo en una sola sesión, en tiempo real con tu equipo en iPhone, iPad y Mac. Gratis, sin cuenta y sin anuncios."),
+  promo="Estima esfuerzo y riesgo en una sola sesión, en tiempo real con tu equipo en iPhone y iPad. Gratis, sin cuenta y sin anuncios."),
  "it": dict(
   subtitle="Planning poker con rischio",
   keywords="scrum,agile,stima,story,points,fibonacci,sprint,matrice,probabilità,impatto,team",

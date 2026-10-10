@@ -36,3 +36,14 @@
   does this backlog item need?" — vergelijking op methode-niveau (inspanning / risico / kans × impact) met vuistregel-tabel;
   app pas in slotalinea, geen concurrenten bij naam. Kaartlabels gecheckt tegen `Deck.swift`.
 - Open voor Ed: macOS-afwijzing bekijken, artikel #01 + #02 publiceren, beslissing Pro/Team-tier.
+
+## 2026-10-10 (15:12-run)
+- Geen nieuwe opdracht van Ed (2 "Claude???"-mails = paywall-screenshots Duski, al verwerkt); OG Consent nog geblokkeerd.
+- **Mac-claims verwijderd uit de kant-en-klare drafts** — macOS 1.0 is REJECTED, dus "iPhone, iPad en Mac" was niet meer waar:
+  `linkedin-batch-01.md` (posts 2, 10 + eerste-reactie-tekst), `article-01-estimate-risk.md` (NL+EN-slotalinea),
+  `ASO-LOCALIZATIONS.md` + bron `aso_locales.py` (promo en-GB, es-MX; limietcheck opnieuw OK), `LAUNCH-KIT.md`
+  (feitenblad, PH-description, AlternativeTo). Tech-vermelding "Mac Catalyst" in de Show-HN-reactie blijft (feit over de code).
+- **LinkedIn-batch #02 (draft)** — `marketing/linkedin-batch-02.md`: posts 11–18 (4 EN-waarde, 2 NL-waarde, 2 app), sluit aan
+  op artikel #01/#02; kaartlabels (None→Critical) en GPL-3.0/publieke repo gecheckt. Plan-doel "15–20 posts" hiermee gehaald (18).
+- Open voor Ed: macOS-afwijzing bekijken (reden staat in Resolution Center), batch #01 + #02 inplannen, artikelen publiceren,
+  beslissing Pro/Team-tier.

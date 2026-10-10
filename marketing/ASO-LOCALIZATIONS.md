@@ -27,12 +27,12 @@ _Gegenereerd door `marketing/aso_locales.py` (limieten gevalideerd). Nog NIET in
 ## Promotional text (≤170)
 
 - **en-US** (151): Estimate effort and risk in one session: Fibonacci, T-shirt sizes or a dedicated Risk deck with a Likelihood × Impact matrix. Free, no account, no ads.
-- **en-GB** (156): Estimate effort and risk together. Planning poker with a built-in Risk deck and Likelihood × Impact matrix — live on iPhone, iPad and Mac. Free, no sign-up.
+- **en-GB** (151): Estimate effort and risk together. Planning poker with a built-in Risk deck and Likelihood × Impact matrix — live on iPhone and iPad. Free, no sign-up.
 - **nl-NL** (151): Schat effort én risico in één sessie: Fibonacci, T-shirtmaten of een apart Risk-deck met Kans × Impact-matrix. Gratis, geen account, geen advertenties.
 - **de-DE** (147): Aufwand und Risiko in einer Runde schätzen: Fibonacci, T-Shirt-Größen oder ein eigenes Risiko-Deck mit Matrix. Kostenlos, ohne Konto, ohne Werbung.
 - **fr-FR** (152): Estimez effort et risque en une seule session : Fibonacci, tailles de T-shirt ou un deck Risque avec matrice Probabilité × Impact. Gratuit, sans compte.
 - **es-ES** (150): Estima esfuerzo y riesgo en una sola sesión: Fibonacci, tallas de camiseta o un mazo de Riesgo con matriz Probabilidad × Impacto. Gratis y sin cuenta.
-- **es-MX** (131): Estima esfuerzo y riesgo en una sola sesión, en tiempo real con tu equipo en iPhone, iPad y Mac. Gratis, sin cuenta y sin anuncios.
+- **es-MX** (126): Estima esfuerzo y riesgo en una sola sesión, en tiempo real con tu equipo en iPhone y iPad. Gratis, sin cuenta y sin anuncios.
 - **it** (148): Stima impegno e rischio in un'unica sessione: Fibonacci, taglie T-shirt o un mazzo Rischio con matrice Probabilità × Impatto. Gratis, senza account.
 - **pt-BR** (149): Estime esforço e risco na mesma sessão: Fibonacci, tamanhos de camiseta ou um baralho de Risco com matriz Probabilidade × Impacto. Grátis, sem conta.
 - **ru** (152): Оценивайте трудозатраты и риски за одну сессию: Фибоначчи, размеры футболок или колода рисков с матрицей вероятность × влияние. Бесплатно, без аккаунта.

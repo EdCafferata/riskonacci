@@ -7,7 +7,7 @@ Alles feitelijk volgens README/app-code; niet claimen wat niet bevestigd is (zie
 | | |
 |---|---|
 | Naam | Riskonacci (woordspeling op Fibonacci) |
-| Platforms | iPhone, iPad (iOS/iPadOS 26+), Mac (Catalyst — **status ASC bevestigen**) |
+| Platforms | iPhone, iPad (iOS/iPadOS 26+), Mac (Catalyst) = **REJECTED per 10 okt 2026 → niet noemen** |
 | Prijs | Gratis, geen abonnement, geen advertenties; optionele fooienpot (3 tiers) |
 | Kern | Planning poker (Fibonacci / Standaard / T-shirt) + apart **Risk-deck** (None→Critical) + optionele **Likelihood × Impact**-modus met 5×5-heatmap, ieders stem als bolletje |
 | Multiplayer | Realtime via 5-teken room-code, geen account (Firebase anonymous auth), stemmen worden bij verlaten verwijderd |
@@ -32,7 +32,7 @@ gebruikersaantallen, "de enige" (zeg "most planning poker tools only estimate ef
 **Description (≤260):**
 > Free planning poker for agile teams — with a separate risk deck and an optional likelihood × impact
 > round that plots everyone's vote on a 5×5 matrix. Realtime with a room code, no account, open source.
-> iPhone, iPad & Mac.
+> iPhone & iPad.
 
 **Maker's first comment:**
 > Hi Product Hunt 👋 I'm Ed.
@@ -91,11 +91,11 @@ Analytics als Ed ze wil delen.
 **Als alternatief voor:** Planning Poker Online, PlanITpoker, Scrum Poker Online, Pointing Poker
 (Ed checkt bij indienen dat deze op AlternativeTo staan).
 **Beschrijving:**
-> Riskonacci is a free, open-source planning poker app for iPhone, iPad and Mac. Besides Fibonacci and
+> Riskonacci is a free, open-source planning poker app for iPhone and iPad. Besides Fibonacci and
 > T-shirt decks it includes a dedicated risk deck and an optional likelihood × impact round shown on a
 > 5×5 heat map. Teams join a realtime room with a short code — no account needed. Available in 11 languages.
 **Tags:** planning-poker, scrum, agile, estimation, risk-management, open-source, no-registration
-**Licentie:** Open Source (GPL-3.0) · **Platforms:** iPhone, iPad, Mac
+**Licentie:** Open Source (GPL-3.0) · **Platforms:** iPhone, iPad
 
 ## 5. Volgorde (voorstel)
 1. Eerst artikel #01 (`article-01-estimate-risk.md`) + 2–3 LinkedIn-posts → wat publiek opbouwen.

@@ -78,7 +78,7 @@ The failure mode is turning this into a heavy process. Some guardrails:
 You can do all of this with sticky notes or two fingers in the air. I built a small free app for it
 because I wanted it in the same flow as planning poker: **Riskonacci** has the usual Fibonacci /
 T-shirt decks plus a separate risk deck, and an optional likelihood × impact mode that shows
-everyone's votes as dots on a 5×5 matrix. It runs on iPhone, iPad and Mac, works in real time with
+everyone's votes as dots on a 5×5 matrix. It runs on iPhone and iPad, works in real time with
 a short room code, needs no account, and it's open source.
 
 But the tool is the least important part. Try the extra round in your next refinement — manually —
@@ -147,7 +147,7 @@ typfout is het ceremonie.
 Dit kan prima met post-its of twee vingers in de lucht. Ik heb er een kleine, gratis app voor gebouwd
 omdat ik het in dezelfde flow als planning poker wilde: **Riskonacci** heeft naast Fibonacci en
 T-shirtmaten een apart risk-deck en een optionele kans × impact-modus die ieders stem als bolletje op
-een 5×5-matrix toont. Werkt op iPhone, iPad en Mac, realtime met een korte roomcode, zonder account,
+een 5×5-matrix toont. Werkt op iPhone en iPad, realtime met een korte roomcode, zonder account,
 en open source.
 
 Maar de tool is het minst belangrijke deel. Probeer de extra ronde in je volgende refinement —
