@@ -8,80 +8,77 @@ struct TipJarView: View {
 
     var body: some View {
         NavigationStack {
-            GeometryReader { geometry in
-                ScrollView {
-                    VStack(spacing: 24) {
-                        VStack(spacing: 8) {
-                            Image(systemName: "heart.fill")
-                                .font(.system(size: 44))
-                                .foregroundStyle(.red)
-                            Text("Riskonacci is free, always.")
-                                .font(.title3.bold())
-                            Text("If it saves your team time, a small tip is always appreciated — never required.")
-                                .font(.subheadline)
-                                .foregroundStyle(.secondary)
-                                .multilineTextAlignment(.center)
-                                .padding(.horizontal)
-                        }
-                        .padding(.top, 24)
-
-                        #if DEBUG
-                        if ProcessInfo.processInfo.environment["RISKONACCI_MOCK_TIP_PRODUCTS"] != nil {
-                            GlassEffectContainer(spacing: 14) {
-                                VStack(spacing: 14) {
-                                    ForEach(TipProduct.allCases, id: \.self) { tip in
-                                        mockTipRow(for: tip)
-                                    }
-                                }
-                            }
+            ScrollView {
+                VStack(spacing: 24) {
+                    VStack(spacing: 8) {
+                        Image(systemName: "heart.fill")
+                            .font(.system(size: 44))
+                            .foregroundStyle(.red)
+                        Text("Riskonacci is free, always.")
+                            .font(.title3.bold())
+                        Text("If it saves your team time, a small tip is always appreciated — never required.")
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                            .multilineTextAlignment(.center)
                             .padding(.horizontal)
-                        } else if store.isLoading {
-                            ProgressView()
-                        } else {
-                            GlassEffectContainer(spacing: 14) {
-                                VStack(spacing: 14) {
-                                    ForEach(store.products) { product in
-                                        tipButton(for: product)
-                                    }
-                                }
-                            }
-                            .padding(.horizontal)
-                        }
-                        #else
-                        if store.isLoading {
-                            ProgressView()
-                        } else {
-                            GlassEffectContainer(spacing: 14) {
-                                VStack(spacing: 14) {
-                                    ForEach(store.products) { product in
-                                        tipButton(for: product)
-                                    }
-                                }
-                            }
-                            .padding(.horizontal)
-                        }
-                        #endif
-
-                        if let message = store.lastTipMessage {
-                            Text(message)
-                                .font(.headline)
-                                .foregroundStyle(Color.accentColor)
-                        }
-
-                        thanksSection
-                            .padding(.top, 8)
                     }
-                    .padding(.bottom, 32)
-                    .frame(maxWidth: 480)
-                    .frame(maxWidth: .infinity)
-                }
-                // Fixed at 80% of the screen height, independent of the
-                // scroll content's length, instead of living inline where
-                // it would drift depending on how much is above it.
-                .overlay(alignment: .top) {
+                    .padding(.top, 24)
+
+                    #if DEBUG
+                    if ProcessInfo.processInfo.environment["RISKONACCI_MOCK_TIP_PRODUCTS"] != nil {
+                        GlassEffectContainer(spacing: 14) {
+                            VStack(spacing: 14) {
+                                ForEach(TipProduct.allCases, id: \.self) { tip in
+                                    mockTipRow(for: tip)
+                                }
+                            }
+                        }
+                        .padding(.horizontal)
+                    } else if store.isLoading {
+                        ProgressView()
+                    } else {
+                        GlassEffectContainer(spacing: 14) {
+                            VStack(spacing: 14) {
+                                ForEach(store.products) { product in
+                                    tipButton(for: product)
+                                }
+                            }
+                        }
+                        .padding(.horizontal)
+                    }
+                    #else
+                    if store.isLoading {
+                        ProgressView()
+                    } else {
+                        GlassEffectContainer(spacing: 14) {
+                            VStack(spacing: 14) {
+                                ForEach(store.products) { product in
+                                    tipButton(for: product)
+                                }
+                            }
+                        }
+                        .padding(.horizontal)
+                    }
+                    #endif
+
+                    if let message = store.lastTipMessage {
+                        Text(message)
+                            .font(.headline)
+                            .foregroundStyle(Color.accentColor)
+                    }
+
+                    // Inline in de scroll-flow (niet als absolute overlay op 80% van de
+                    // vensterhoogte): op macOS overlapte die overlay anders de content
+                    // en viel tekst weg (App Review Guideline 4, afwijzing 18 okt 2026).
                     rateButton
-                        .padding(.top, geometry.size.height * 0.8)
+                        .padding(.top, 8)
+
+                    thanksSection
+                        .padding(.top, 8)
                 }
+                .padding(.bottom, 32)
+                .frame(maxWidth: 480)
+                .frame(maxWidth: .infinity)
             }
             .navigationTitle("Tip Jar")
             .navigationBarTitleDisplayMode(.inline)
