@@ -1,6 +1,6 @@
 # Riskonacci
 
-🔒 Laatste security check: 2026-10-26 20:42 CET
+🔒 Laatste security check: 2026-10-27 20:22 CET
 
 **Riskonacci** is een gratis, native iOS/iPadOS/Mac Catalyst-app (SwiftUI) voor agile/lean planning poker — met een ingebouwd **risico**-kaarttype naast de gebruikelijke story-point-schattingen, iets wat vrijwel geen bestaande planning-poker-app aanbiedt. De naam is een woordspeling op Fibonacci, de reeks die vrijwel elke planning-poker-app als standaarddeck gebruikt.
 
