@@ -51,7 +51,13 @@ struct RoomView: View {
     /// useful for the nearby (Wi-Fi/Bluetooth) mode when everyone's already
     /// in the same room.
     private var shareMessage: String {
-        String(localized: "Join my Riskonacci room:") + " " + room.roomID
+        """
+        \(String(localized: "Join my Riskonacci room:")) \(room.roomID)
+
+        App Store (iPhone/iPad): https://apps.apple.com/app/id6807144804
+        Mac App Store: https://apps.apple.com/app/id6807144804?platform=mac
+        Google Play: https://play.google.com/store/apps/details?id=info.cafferata.riskonacci
+        """
     }
 
     private var hostControls: some View {
