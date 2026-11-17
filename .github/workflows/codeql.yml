@@ -1,0 +1,67 @@
+name: CodeQL
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '41 4 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  analyze-python:
+    name: Analyze (python)
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: github/codeql-action/init@v4
+        with:
+          languages: python
+          build-mode: none
+      - uses: github/codeql-action/analyze@v4
+        with:
+          category: /language:python
+
+  analyze-swift:
+    name: Analyze (swift)
+    runs-on: macos-latest
+    timeout-minutes: 90
+    permissions:
+      security-events: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: github/codeql-action/init@v4
+        with:
+          languages: swift
+          build-mode: manual
+      # GoogleService-Info.plist staat bewust niet in de repo (gitignored); de build kopieert hem als resource,
+      # dus voor de analyse volstaat een dummy zonder echte project-id's of keys.
+      - name: Dummy GoogleService-Info.plist
+        run: |
+          cat > GoogleService-Info.plist <<'PLIST'
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0"><dict>
+            <key>API_KEY</key><string>codeql-dummy</string>
+            <key>GCM_SENDER_ID</key><string>000000000000</string>
+            <key>BUNDLE_ID</key><string>info.cafferata.riskonacci</string>
+            <key>PROJECT_ID</key><string>codeql-dummy</string>
+            <key>GOOGLE_APP_ID</key><string>1:000000000000:ios:0000000000000000</string>
+          </dict></plist>
+          PLIST
+      # Autobuild bouwt per target en struikelt dan over de Firebase-packages (nanopb); bouw via het scheme (ongesigneerd).
+      - name: Build
+        run: |
+          xcodebuild build -project Riskonacci.xcodeproj -scheme Riskonacci \
+            -destination 'generic/platform=iOS' \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO
+      - uses: github/codeql-action/analyze@v4
+        with:
+          category: /language:swift
