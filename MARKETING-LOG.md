@@ -1,5 +1,12 @@
 # Riskonacci — Marketing-log
 
+## 2026-11-18
+- **LinkedIn-post (NL) GEPOST door Ed** — thema: security-opties van Riskonacci + de 5×5-risicomatrix als afbeelding
+  (`riskonacci-risk-matrix.png`). Punten: geen account (anoniem ID per toestel), meedoen alleen met een room-code van
+  5 tekens, alleen jij kunt je eigen stem zetten/verwijderen (Firestore-rules), deelnemer- en stemgegevens gewist bij
+  verlaten, geen eigen server + dagelijkse security-check (CodeQL/Dependabot). Platforms iPhone/iPad/Mac/Android
+  (Mac is live). Store-links in de eerste reactie. Hashtags: #agile #scrum #riskmanagement #indiedev.
+
 ## 2026-09-25
 - **ASO-lokalisaties (draft)** — `marketing/ASO-LOCALIZATIONS.md` (bron + limietcheck: `marketing/aso_locales.py`).
   13 store-locales (en-US, en-GB, nl-NL, de-DE, fr-FR, es-ES, es-MX, it, pt-BR, ru, ja, ko, zh-Hans): subtitle,
