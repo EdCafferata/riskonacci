@@ -1,1 +1,1 @@
-First public release of Riskonacci.
+Security and stability improvements, including an updated Firebase SDK.
