@@ -9,10 +9,10 @@ Er hangt een lege, niet-ingediende reviewSubmission (READY_FOR_REVIEW, 0 items) 
       `cafferata.info` als marketing-URL; met deze bestanden zet `fastlane` ze bij 1.0.1 goed.
 - [x] Release-notes 1.0.1 (stond nog "First public release").
 
-**Moet nog — beslissing Ed:**
-- [ ] **Derde fooi (Aperitivo) werkt niet in de live app.** De code vraagt `tip.aperetivo` op, maar dat product
-      staat op DEVELOPER_REMOVED_FROM_SALE. Het nieuwe `tip.aperitivo` is NON_CONSUMABLE én MISSING_METADATA
-      (een fooi hoort CONSUMABLE te zijn; type is niet te wijzigen). Gebruikers zien dus maar 2 fooien.
+**Opgelost 19 nov (via API, live, geen build nodig):**
+- [x] Derde fooi (Aperitivo) werkte niet: `tip.aperetivo` stond op DEVELOPER_REMOVED_FROM_SALE. Weer in de verkoop
+      gezet (175 landen, APPROVED, naam terug naar "Aperitivo Tip"); het halve NON_CONSUMABLE `tip.aperitivo` verwijderd.
+      De code (`TipProduct.aperitivo` = `tip.aperetivo`) klopt dus en blijft zo.
 
 **Verder:**
 - [ ] Minimaal iOS/macOS 26.0 — overwegen omlaag te gaan (zoals Duski → 18.0) voor meer bereik.
